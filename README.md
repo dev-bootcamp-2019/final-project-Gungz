@@ -18,7 +18,7 @@
 1. When the web app is 1st opened and the blockchain is still empty, there's nothing to display except the account used by metamask to connect to this web app
 2. Click Create Bounty, modal screen will appear
 3. Enter name, description, reward
-4. Click Submit
+4. Click Submit, Click Confirm on MetaMask
 5. You can see the new Bounty is available on the screen and your account's Ether will be reduced
 6. Close the modal screen
 7. Switch tab to see it appears also on All Posted Bounties
@@ -27,9 +27,9 @@
 10. The web page will be refreshed and blank screen will appear (there's some issue with Drizzle it seems)
 11. Worry not, just refresh the screen (like by clicking CTRL+R in Firefox)
 12. Go to tab All Posted Bounties
-13. Proposed solution for a job using button Propose, a modal screen will appear
+13. Propose a solution for a job using button Propose, a modal screen will appear
 14. Fill in description
-15. Click Submit
+15. Click Submit, , Click Confirm on MetaMask
 16. Close the modal screen
 17. You can go to My Submission to see that your Submission has been stored in the blockchain
 18. Switch account again to the account that creates the Bounty (1st account)
