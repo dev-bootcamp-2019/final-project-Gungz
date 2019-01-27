@@ -249,7 +249,7 @@ contract Bounties is ReentrancyGuard, Ownable {
         Job storage job = jobsMapping[submissions[submissionId].jobId];
         require(submission.submissionPoster == msg.sender);
         require(balance >= job.reward);
-        require(balanceMapping[msg.sender] >= jobReward);
+        require(balanceMapping[msg.sender] >= job.reward);
         require(submission.rewardTaken == false);
         balanceMapping[msg.sender] -= job.reward;
         balance -= job.reward;
