@@ -9,6 +9,7 @@
 6. In 1st terminal, execute truffle compile
 7. In 1st terminal, execute truffle migrate
 8. In 1st terminal, execute yarn start
+9. Open web browser (firefox quantum recommended), go to URL http://localhost:3000
 
 ## How to execute unit test
 1. In the directory where repository is imported, execute truffle test

@@ -12,7 +12,7 @@ const drizzleOptions = {
     Bounties
   ],
   events: {
-    Bounties: ['jobCreated', 'submissionCreated', 'Received', 'paymentWihdrawn', 'submissionAccepted']
+    Bounties: ['jobCreated', 'submissionCreated', 'Received', 'paymentWithdrawn', 'submissionAccepted']
   },
   polls: {
     accounts: 1500
