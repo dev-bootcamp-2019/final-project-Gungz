@@ -9,7 +9,7 @@ This implementation can be found in modifier `stopIfEmergency` which doesn't all
 
 ## Withdrawal Pattern
 
-We choose to implement this design pattern because we don't want to block payment for address that is not malicious. By using withdrawal pattern, the address that wants to withdraw the fund once the submission is approved will be responsible for the transfer by calling the specific method inside the Bounties contract that will transfer the fund to the address. If we don't use this pattern and there's malicious contract as payment destination (imagine if we push the payment inside `acceptSubmission` function), the function will always fail and revert which makes us unable to complete the additional logic of the function prior to sending the payment.
+We choose to implement this design pattern because we don't want to block payment for address that is not malicious. By using withdrawal pattern, the address that wants to withdraw the fund once the submission is approved will be responsible for the transfer by calling the specific method inside the Bounties contract that will transfer the fund to the address. If we don't use this pattern and there's malicious contract as payment destination (imagine if we push the payment inside `acceptSubmission` function), the function will always fail and revert which makes us unable to complete the additional logic (e.g. the job status will never change to complete) of the function prior to sending the payment.
 
 The withdrawal pattern implemetation can be found in `withdrawPayment` function of Bounties.sol.
 
