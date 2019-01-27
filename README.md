@@ -15,7 +15,7 @@
 
 ## Familiarize yourself with this app (tested using Firefox Quantum in Ubuntu 16.04)
 1. When the web app is 1st opened and the blockchain is still empty, there's nothing to display except the account used by metamask to connect to this web app
-2. CLick Create Bounty, modal screen will appear
+2. Click Create Bounty, modal screen will appear
 3. Enter name, description, reward
 4. Click Submit
 5. You can see the new Bounty is available on the screen and your account's Ether will be reduced
