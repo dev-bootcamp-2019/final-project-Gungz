@@ -29,15 +29,15 @@
 12. Go to tab All Posted Bounties
 13. Propose a solution for a job using button Propose, a modal screen will appear
 14. Fill in description
-15. Click Submit, , Click Confirm on MetaMask
+15. Click Submit, Click Confirm on MetaMask
 16. Close the modal screen
 17. You can go to My Submission to see that your Submission has been stored in the blockchain
 18. Switch account again to the account that creates the Bounty (1st account)
 19. Remember to refresh if blank page appears
 20. In My Posted Bounties tab, hover to the created job and click on it
 21. The proposed solution will appear below 
-22. Click Accept
+22. Click Accept, Click Confirm on MetaMask
 23. The job / bounty will change status to Completed
 24. Again, switch to account that submits the proposed solution (2nd account)
-25. Go to My Submission tab, notice there's Withdraw button, click it
+25. Go to My Submission tab, notice there's Withdraw button, click it, then click Confirm on MetaMask
 26. The Withdraw button will disappear because you have withdrawn your reward and Ether in your account will increase
