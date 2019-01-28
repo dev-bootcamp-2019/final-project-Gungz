@@ -1,2 +1,683 @@
 The contract address on Ropsten Test Network is 
 0xb4448c0b463a96cb1a94e3acae9d5cc48641f9b2
+
+The ABI for the contract is as following :
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "submissionId",
+				"type": "uint256"
+			}
+		],
+		"name": "acceptSubmission",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"name": "reward",
+				"type": "uint256"
+			}
+		],
+		"name": "createJob",
+		"outputs": [
+			{
+				"name": "jobId",
+				"type": "uint256"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "jobPoster",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "jobId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "jobName",
+				"type": "string"
+			}
+		],
+		"name": "jobCreated",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "submissionPoster",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "submissionId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "jobId",
+				"type": "uint256"
+			}
+		],
+		"name": "submissionCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "_from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
+		"name": "Received",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "submissionPoster",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "submissionId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "jobId",
+				"type": "uint256"
+			}
+		],
+		"name": "submissionAccepted",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "submissionPoster",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "submissionId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "jobId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "paymentWithdrawn",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "jobId",
+				"type": "uint256"
+			},
+			{
+				"name": "description",
+				"type": "string"
+			}
+		],
+		"name": "submitProposal",
+		"outputs": [
+			{
+				"name": "submissionId",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "toggleActive",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "submissionId",
+				"type": "uint256"
+			}
+		],
+		"name": "withdrawPayment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "balance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "contractName",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getJobs",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"name": "jobPoster",
+						"type": "address"
+					},
+					{
+						"name": "finished",
+						"type": "bool"
+					}
+				],
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getJobsByPoster",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"name": "jobPoster",
+						"type": "address"
+					},
+					{
+						"name": "finished",
+						"type": "bool"
+					}
+				],
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getJobsByPoster",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"name": "jobPoster",
+						"type": "address"
+					},
+					{
+						"name": "finished",
+						"type": "bool"
+					}
+				],
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getJobsByPosterLength",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getJobsLength",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "jobId",
+				"type": "uint256"
+			},
+			{
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getSubmissionByJobID",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "submissionId",
+						"type": "uint256"
+					},
+					{
+						"name": "jobId",
+						"type": "uint256"
+					},
+					{
+						"name": "submissionPoster",
+						"type": "address"
+					},
+					{
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"name": "chosen",
+						"type": "bool"
+					},
+					{
+						"name": "rewardTaken",
+						"type": "bool"
+					}
+				],
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "jobId",
+				"type": "uint256"
+			}
+		],
+		"name": "getSubmissionByJobID",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "submissionId",
+						"type": "uint256"
+					},
+					{
+						"name": "jobId",
+						"type": "uint256"
+					},
+					{
+						"name": "submissionPoster",
+						"type": "address"
+					},
+					{
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"name": "chosen",
+						"type": "bool"
+					},
+					{
+						"name": "rewardTaken",
+						"type": "bool"
+					}
+				],
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "jobId",
+				"type": "uint256"
+			}
+		],
+		"name": "getSubmissionByJobIDLength",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getSubmissionsByPoster",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "submissionId",
+						"type": "uint256"
+					},
+					{
+						"name": "jobId",
+						"type": "uint256"
+					},
+					{
+						"name": "submissionPoster",
+						"type": "address"
+					},
+					{
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"name": "chosen",
+						"type": "bool"
+					},
+					{
+						"name": "rewardTaken",
+						"type": "bool"
+					}
+				],
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getSubmissionsByPosterLength",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "isOwner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "numJob",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "stopped",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
